@@ -1,0 +1,14 @@
+{
+  "pageRequest": {
+    "pageNumber": 0,
+    "pageSize": 10,
+    "sortAscending": true
+  },
+  "queries": [
+    {
+      "queryField": "versionNumber",
+      "queryValue": "26",
+      "searchCriteria": "equals"
+    }
+  ]
+}

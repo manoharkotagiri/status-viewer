@@ -1,0 +1,346 @@
+{
+  "totalElements": 28,
+  "totalPages": 1,
+  "numberOfElements": 28,
+  "pageRequest": {
+    "pageNumber": 0,
+    "pageSize": 100,
+    "sortAscending": true
+  },
+  "results": [
+    {
+      "publishedGtin": "00010900005166",
+      "version": 53,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00010900005166"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-15 20:07:01.001",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "25|Requires National Bioengineered Food Disclosure must be populated for this item.||"
+    },
+    {
+      "publishedGtin": "00030300001551",
+      "version": 23,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300001568"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-28 18:36:18.018",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300001773",
+      "version": 54,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300001780"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-20 15:25:13.013",
+      "venusImfNumber": "57944888",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002091",
+      "version": 64,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002114"
+      ],
+      "itemHierarchyStatus": "VENUS_SUBMITTED",
+      "roleUpdateDateAndTime": "2020-10-19 07:57:49.049",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "00|NEW ITEM||"
+    },
+    {
+      "publishedGtin": "00030300002312",
+      "version": 33,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002312"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-10 16:12:05.005",
+      "venusImfNumber": "29909915",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002329",
+      "version": 7,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002329"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-09 14:51:41.041",
+      "venusImfNumber": "59299868",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002336",
+      "version": 16,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002343"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-06 13:14:54.054",
+      "venusImfNumber": "74682253",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002398",
+      "version": 8,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002398"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-08 16:22:37.037",
+      "venusImfNumber": "94193667",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002404",
+      "version": 6,
+      "innerPackItemId": "00030300002428",
+      "salesVariantItemIdList": [
+        "00030300002435"
+      ],
+      "itemHierarchyStatus": "VENUS_SUBMITTED",
+      "roleUpdateDateAndTime": "2020-10-09 12:56:13.013",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "00|REUSABLE SHIPPER||"
+    },
+    {
+      "publishedGtin": "00030300002442",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002442"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-11 10:16:04.004",
+      "venusImfNumber": "31913394",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002459",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002473"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-09 16:27:15.015",
+      "venusImfNumber": "34661502",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002497",
+      "version": 8,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002503"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-14 15:19:12.012",
+      "venusImfNumber": "12775821",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002510",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002510"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-11 22:49:22.022",
+      "venusImfNumber": "55843753",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002527",
+      "version": 12,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002527"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-19 10:17:54.054",
+      "venusImfNumber": "59350222",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002534",
+      "version": 17,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002534"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-20 22:26:27.027",
+      "venusImfNumber": "98766510",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002541",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002541"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-19 12:46:21.021",
+      "venusImfNumber": "90475100",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002558",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002589"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-20 18:02:41.041",
+      "venusImfNumber": "42927188",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00030300002602",
+      "version": 8,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00030300002602"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-27 10:14:58.058",
+      "venusImfNumber": "22817630",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00034000259298",
+      "version": 2,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00034000296552"
+      ],
+      "itemHierarchyStatus": "VENUS_SUBMITTED",
+      "roleUpdateDateAndTime": "2020-10-22 14:47:32.032",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "00|NEW ITEM||"
+    },
+    {
+      "publishedGtin": "20100004004135",
+      "version": 41,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "20100004004166"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-12 21:56:55.055",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "20100004005750",
+      "version": 21,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "20100004005750"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-18 23:45:01.001",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "20100004006016",
+      "version": 53,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "20100004006030"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-12 04:23:31.031",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "20100004006047",
+      "version": 23,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "20100004006054"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-09 12:56:40.040",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "20100004006313",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "20100004006337"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-22 12:20:17.017",
+      "venusImfNumber": "35723514",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "50000003001092",
+      "version": 623,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "50000003001092"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-07 08:34:07.007",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "50100003001716",
+      "version": 12,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "50100003001730"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-06 14:23:12.012",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "75100004005750",
+      "version": 4,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "75100004005750"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2020-10-19 21:07:27.027",
+      "venusImfNumber": "33118838",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "82820004087173",
+      "version": 1,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-10-19 11:30:58.058",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    }
+  ]
+}

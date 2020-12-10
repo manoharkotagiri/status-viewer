@@ -1,0 +1,24 @@
+{
+  "pageRequest": {
+    "pageNumber": 0,
+    "pageSize": 10,
+    "sortAscending": true
+  },
+  "queries": [
+    {
+      "queryField": "innerPackGtin",
+      "queryValue": "",
+      "searchCriteria": "is not defined"
+    },
+    {
+      "queryField": "hierarchyStatus",
+      "queryValue": "CM_REJECTED",
+      "searchCriteria": "not like"
+    },
+    {
+      "queryField": "versionNumber",
+      "queryValue": "26",
+      "searchCriteria": "not equals"
+    }
+  ]
+}

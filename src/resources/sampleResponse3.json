@@ -1,0 +1,124 @@
+{
+  "totalElements": 15284,
+  "totalPages": 1529,
+  "numberOfElements": 10,
+  "pageRequest": {
+    "pageNumber": 0,
+    "pageSize": 10,
+    "sortAscending": true
+  },
+  "results": [
+    {
+      "publishedGtin": "00000000000030",
+      "version": 1,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2019-05-22 11:44:49.049",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000000031",
+      "version": 22,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000000222"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2019-03-20 16:37:29.029",
+      "venusImfNumber": "82700747",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000000154",
+      "version": 23,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000000154"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2015-02-26 02:04:56.056",
+      "venusImfNumber": null,
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000000161",
+      "version": 2,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000000161"
+      ],
+      "itemHierarchyStatus": "MDM_REJECT",
+      "roleUpdateDateAndTime": "2020-02-06 14:11:08.008",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "The item was submitted as a publication type of INITIAL LOAD. This item is not currently active in the Kroger Family of Stores and needs to be submitted as a publication type of NEW in order to be processed"
+    },
+    {
+      "publishedGtin": "00000000000369",
+      "version": 2,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000000369"
+      ],
+      "itemHierarchyStatus": "MDM_REJECT",
+      "roleUpdateDateAndTime": "2020-01-16 09:31:13.013",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "The item was submitted as a publication type of INITIAL LOAD. This item is not currently active in the Kroger Family of Stores and needs to be submitted as a publication type of NEW in order to be processed"
+    },
+    {
+      "publishedGtin": "00000000000376",
+      "version": 7,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000000406"
+      ],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-07-22 14:10:53.053",
+      "venusImfNumber": "-1",
+      "venusReasonCode": "25|Requires National Bioengineered Food Disclosure must be populated for this item.||"
+    },
+    {
+      "publishedGtin": "00000000000992",
+      "version": 1,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2019-09-16 11:21:17.017",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000002042",
+      "version": 1,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [],
+      "itemHierarchyStatus": "VIP_REVIEW",
+      "roleUpdateDateAndTime": "2020-06-30 10:19:27.027",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000002141",
+      "version": 3,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2018-12-12 16:07:49.049",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    },
+    {
+      "publishedGtin": "00000000003278",
+      "version": 3,
+      "innerPackItemId": null,
+      "salesVariantItemIdList": [
+        "00000000003278"
+      ],
+      "itemHierarchyStatus": "VIP_SYNCHRONIZED",
+      "roleUpdateDateAndTime": "2019-09-25 13:31:21.021",
+      "venusImfNumber": "-1",
+      "venusReasonCode": null
+    }
+  ]
+}

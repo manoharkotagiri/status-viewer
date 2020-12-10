@@ -1,0 +1,20 @@
+{
+  "pageRequest": {
+    "pageNumber": 0,
+    "pageSize": 100,
+    "sortAscending": true
+  },
+  "queries": [
+
+    {
+      "queryField": "roleUpdateDatetime",
+      "queryValue": "2020-10",
+      "searchCriteria": "starts with"
+    },
+    {
+      "queryField": "publishedGtin",
+      "queryValue": "000",
+      "searchCriteria": "like"
+    }
+  ]
+}
