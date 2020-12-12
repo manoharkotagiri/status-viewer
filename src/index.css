@@ -17,14 +17,14 @@
   grid-template-columns: 1200px repeat(auto-fill, 500px) 400px;
 }
 .appTitle {
-   width: 100%;
-   justify-content: left;
-   align-items: baseline;
-   padding: 1em;
-   margin-bottom: 2em;
-   background-color: #dfe1e1;
-   color: #084999;
- }
+  width: 100%;
+  justify-content: left;
+  align-items: baseline;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #dfe1e1;
+  color: #084999;
+}
 .criteria {
   box-sizing: border-box;
   width: 100%;
