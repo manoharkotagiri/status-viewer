@@ -8,8 +8,8 @@ const App = () => {
     return (
         <div className="App">
             <Title />
-             <SearchCriteria />
-            {/*<SearchCriteriaModified />*/}
+{/*             <SearchCriteria />*/}
+            <SearchCriteriaModified />
         </div>
     );
 };
