@@ -5,7 +5,9 @@ import "kds-react/kds-utils.css"
 import Label from "kds-react/build/cjs/components/Label/Label";
 import Button from "kds-react/build/cjs/components/Button/Button";
 import Text from "kds-react/build/cjs/components/Text/Text";
+import Form from "kds-react/build/cjs/components/Form/Form";
 import service from "../apis/service";
+import Grid from "./Grid";
 
 const dropDownElements = [
     {value: "equals", label: "equals"},
@@ -31,7 +33,7 @@ class SearchCriteriaModified extends React.Component {
             roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
             venusImfNumberValue: "", venusImfNumberCriteria: "equals",
             venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
-            pageNumber: 0, pageSize: 10, sortAscending: true
+            pageNumber: 0, pageSize: 10, sortAscending: true, responseData: null
         }
     }
 
@@ -113,7 +115,18 @@ class SearchCriteriaModified extends React.Component {
 
         console.log("Final Json:", JSON.stringify(finalJson))
         const response = await service.post('/hierarchyRoles', finalJson);
-        console.log("Response Results:", response.data)
+        this.setState({responseData: response.data})
+
+        this.state = {
+            publishedGtinValue: "", publishedGtinCriteria: "equals",
+            innerPackGtinValue: "", innerPackGtinCriteria: "equals",
+            svGtinValue: "", svGtinCriteria: "equals",
+            hierarchyStatusValue: "", hierarchyStatusCriteria: "equals",
+            roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
+            venusImfNumberValue: "", venusImfNumberCriteria: "equals",
+            venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
+            pageNumber: 0, pageSize: 10, sortAscending: true
+        };
     };
 
     render() {
@@ -128,94 +141,101 @@ class SearchCriteriaModified extends React.Component {
             <div className="appTitle">
 
                 <h3 className="text-default-900">VIP Hierarchy Status Viewer</h3>
-                <br/><br/><br/>
+                <br/><br/>
                 <Text className="text-default-900" size="m" bold>Hierarchy Roles</Text>
                 <br/>
+
                 <div className="criteria">
-                    <div className="container">
-                        {/*Published GTIN: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Published GTIN</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.publishedGtinCriteria}
-                                onChange={e => this.setState({publishedGtinCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.publishedGtinValue}
-                               onChange={e => this.setState({publishedGtinValue: e.target.value})}/>
+                    <Form onSubmit={this.onSubmit} className="kds-Form">
+                        <div className="container">
 
-                        {/*Inner Pack Item ID: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Inner Pack Item ID</Label>
-                        <select className="text-default-900" type="search" name="operators2" id="operators2"
-                                value={this.state.innerPackGtinCriteria}
-                                onChange={e => this.setState({innerPackGtinCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.innerPackGtinValue}
-                               onChange={e => this.setState({innerPackGtinValue: e.target.value})}/>
+                            {/*Published GTIN: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Published GTIN</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.publishedGtinCriteria}
+                                    onChange={e => this.setState({publishedGtinCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.publishedGtinValue}
+                                   onChange={e => this.setState({publishedGtinValue: e.target.value})}/>
 
-                        {/*Sales Variant Item ID: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Sales Variant Item ID</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.svGtinCriteria}
-                                onChange={e => this.setState({svGtinCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.svGtinValue}
-                               onChange={e => this.setState({svGtinValue: e.target.value})}/>
+                            {/*Inner Pack Item ID: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Inner Pack Item ID</Label>
+                            <select className="text-default-900" type="search" name="operators2" id="operators2"
+                                    value={this.state.innerPackGtinCriteria}
+                                    onChange={e => this.setState({innerPackGtinCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.innerPackGtinValue}
+                                   onChange={e => this.setState({innerPackGtinValue: e.target.value})}/>
 
-                        {/*Item Hierarchy Status: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Item Hierarchy Status</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.hierarchyStatusCriteria}
-                                onChange={e => this.setState({hierarchyStatusCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.hierarchyStatusValue}
-                               onChange={e => this.setState({hierarchyStatusValue: e.target.value})}/>
+                            {/*Sales Variant Item ID: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Sales Variant Item ID</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.svGtinCriteria}
+                                    onChange={e => this.setState({svGtinCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.svGtinValue}
+                                   onChange={e => this.setState({svGtinValue: e.target.value})}/>
+
+                            {/*Item Hierarchy Status: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Item Hierarchy Status</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.hierarchyStatusCriteria}
+                                    onChange={e => this.setState({hierarchyStatusCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.hierarchyStatusValue}
+                                   onChange={e => this.setState({hierarchyStatusValue: e.target.value})}/>
 
 
-                        {/*Role Update Date and Time: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Role Update Date and Time</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.roleUpdateDatetimeCriteria}
-                                onChange={e => this.setState({roleUpdateDatetimeCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.roleUpdateDatetimeValue}
-                               onChange={e => this.setState({roleUpdateDatetimeValue: e.target.value})}/>
+                            {/*Role Update Date and Time: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Role Update Date and Time</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.roleUpdateDatetimeCriteria}
+                                    onChange={e => this.setState({roleUpdateDatetimeCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.roleUpdateDatetimeValue}
+                                   onChange={e => this.setState({roleUpdateDatetimeValue: e.target.value})}/>
 
-                        {/*Venus IMF Number: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Venus IMF Number</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.venusImfNumberCriteria}
-                                onChange={e => this.setState({venusImfNumberCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.venusImfNumberValue}
-                               onChange={e => this.setState({venusImfNumberValue: e.target.value})}/>
+                            {/*Venus IMF Number: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Venus IMF Number</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.venusImfNumberCriteria}
+                                    onChange={e => this.setState({venusImfNumberCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.venusImfNumberValue}
+                                   onChange={e => this.setState({venusImfNumberValue: e.target.value})}/>
 
-                        {/*Venus Reason Code: label, dropdown and text input*/}
-                        <Label className="text-default-900" size="s">Venus Reason Code</Label>
-                        <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                value={this.state.venusReasonCodeCriteria}
-                                onChange={e => this.setState({venusReasonCodeCriteria: e.target.value})}>
-                            {dropDownOptions}
-                        </select>
-                        <input className="text-default-900" type="text" ref={this.state.venusReasonCodeValue}
-                               onChange={e => this.setState({venusReasonCodeValue: e.target.value})}/>
+                            {/*Venus Reason Code: label, dropdown and text input*/}
+                            <Label className="text-default-900" size="s">Venus Reason Code</Label>
+                            <select className="text-default-900" type="search" name="operators1" id="operators1"
+                                    value={this.state.venusReasonCodeCriteria}
+                                    onChange={e => this.setState({venusReasonCodeCriteria: e.target.value})}>
+                                {dropDownOptions}
+                            </select>
+                            <input className="text-default-900" type="text" ref={this.state.venusReasonCodeValue}
+                                   onChange={e => this.setState({venusReasonCodeValue: e.target.value})}/>
 
+                        </div>
                         {/*Show History: label, checkbox*/}
-                        <Label className="text-default-900" size="s">Show History</Label>
-                        <input className="text-default-900" type="checkbox" id="showHistory" name="showHistory"/>
-                        <br/><br/>
+                        <div className="history">
+                            <Label className="text-default-900" size="s">Show History</Label>
+                            <input className="text-default-900" type="checkbox" id="showHistory" name="showHistory"/>
+                        </div>
+                        <br/>
 
                         {/*Submit and Clear buttons*/}
-                        <Button className="bg-brand-primary" compact type="submit"
-                                onClick={this.onSubmit}>Search</Button>
-                        <Button className="bg-brand-primary" compact type="reset"> Clear</Button>
-
-                    </div>
+                        <div className="search">
+                            <Button className="bg-brand-primary" compact type="submit">Search</Button>
+                            <Button className="bg-brand-primary" compact type="reset"> Clear</Button>
+                        </div>
+                    </Form>
                 </div>
+                {(this.state.responseData !== null)?  <Grid gridData={this.state.responseData}/> :null }
             </div>
         );
     }

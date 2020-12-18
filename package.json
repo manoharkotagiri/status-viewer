@@ -1,18 +1,35 @@
 {
-  "name": "status-viewer",
+  "name": "eis-hierarchy-status-viewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
-    "kds-react": "^9.0.0",
+    "@testing-library/react": "^11.2.1",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "kds-react": "^8.3.0",
+    "kds-stencil": "^4.5.0",
+    "postcss-custom-properties": "10.0.0",
     "react": "^17.0.1",
+    "react-data-grid": "^6.1.0",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "4.0.0",
+    "react-table": "^7.6.2",
+    "semantic-ui-react": "^2.0.1",
+    "serve": "^11.3.2",
+    "web-vitals": "^0.2.4",
+    "yarn": "^1.22.10"
+  },
+  "resolutions": {
+    "react-scripts/postcss-preset-env/postcss-custom-properties": "^10.0.0"
   },
   "scripts": {
+    "serve": "serve -s build -p 3000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -46,7 +46,7 @@
 .search {
   display: grid;
   grid-template-columns: 100px repeat(auto-fill, 100px) 200px;
-  height: 400px;
+  height: 30px;
   column-gap: 5px;
 }
 .history {
