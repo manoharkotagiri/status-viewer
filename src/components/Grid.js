@@ -3,7 +3,7 @@ import {Table} from "semantic-ui-react";
 
 const Grid = (gridData) => {
 
-    console.log(gridData)
+    console.log(JSON.stringify(gridData))
 
     return (
         <div>
