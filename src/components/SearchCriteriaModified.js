@@ -6,6 +6,7 @@ import Label from "kds-react/build/cjs/components/Label/Label";
 import Button from "kds-react/build/cjs/components/Button/Button";
 import Text from "kds-react/build/cjs/components/Text/Text";
 import Form from "kds-react/build/cjs/components/Form/Form";
+import Divider from "@material-ui/core/Divider";
 import service from "../apis/service";
 import Grid from "./Grid";
 
@@ -33,11 +34,11 @@ class SearchCriteriaModified extends React.Component {
             roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
             venusImfNumberValue: "", venusImfNumberCriteria: "equals",
             venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
-            pageNumber: 0, pageSize: 10, sortAscending: true, responseData: null
+            pageNumber: 0, pageSize: 10, sortAscending: true, responseData: null, queriesInState:[], finalJsonInState:null
         }
     }
 
-    onSubmit = async () => {
+    onSubmit =() => {
 
         let searchList = []
 
@@ -113,20 +114,7 @@ class SearchCriteriaModified extends React.Component {
             }
         }
 
-        console.log("Final Json:", JSON.stringify(finalJson))
-        const response = await service.post('/hierarchyRoles', finalJson);
-        this.setState({responseData: response.data})
-
-        this.state = {
-            publishedGtinValue: "", publishedGtinCriteria: "equals",
-            innerPackGtinValue: "", innerPackGtinCriteria: "equals",
-            svGtinValue: "", svGtinCriteria: "equals",
-            hierarchyStatusValue: "", hierarchyStatusCriteria: "equals",
-            roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
-            venusImfNumberValue: "", venusImfNumberCriteria: "equals",
-            venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
-            pageNumber: 0, pageSize: 10, sortAscending: true
-        };
+        this.setState({finalJsonInState: finalJson})
     };
 
     render() {
@@ -143,6 +131,7 @@ class SearchCriteriaModified extends React.Component {
                 <h3 className="text-default-900">VIP Hierarchy Status Viewer</h3>
                 <br/><br/>
                 <Text className="text-default-900" size="m" bold>Hierarchy Roles</Text>
+                <Divider/>
                 <br/>
 
                 <div className="criteria">
@@ -223,7 +212,7 @@ class SearchCriteriaModified extends React.Component {
                         </div>
                         {/*Show History: label, checkbox*/}
                         <div className="history">
-                            <Label className="text-default-900" size="s">Show History</Label>
+                            <Label className="text-default-900" size="s">Include History</Label>
                             <input className="text-default-900" type="checkbox" id="showHistory" name="showHistory"/>
                         </div>
                         <br/>
@@ -235,7 +224,7 @@ class SearchCriteriaModified extends React.Component {
                         </div>
                     </Form>
                 </div>
-                {(this.state.responseData !== null)?  <Grid gridData={this.state.responseData}/> :null }
+                <Grid girdJson={this.state.finalJsonInState}/>
             </div>
         );
     }

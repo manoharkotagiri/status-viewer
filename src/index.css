@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: 1200px repeat(auto-fill, 500px) 400px;
 }
+
 .appTitle {
   width: 100%;
   justify-content: left;
@@ -51,7 +52,7 @@
 }
 .history {
   display: grid;
-  grid-template-columns: 1px 1px;
+  grid-template-columns: 7px 1px;
   align-items: center;
 }
 label {
