@@ -6,8 +6,6 @@ import Label from "kds-react/build/cjs/components/Label/Label";
 import Button from "kds-react/build/cjs/components/Button/Button";
 import Text from "kds-react/build/cjs/components/Text/Text";
 import Form from "kds-react/build/cjs/components/Form/Form";
-import Divider from "@material-ui/core/Divider";
-import service from "../apis/service";
 import Grid from "./Grid";
 
 const dropDownElements = [
@@ -131,7 +129,6 @@ class SearchCriteriaModified extends React.Component {
                 <h3 className="text-default-900">VIP Hierarchy Status Viewer</h3>
                 <br/><br/>
                 <Text className="text-default-900" size="m" bold>Hierarchy Roles</Text>
-                <Divider/>
                 <br/>
 
                 <div className="criteria">
