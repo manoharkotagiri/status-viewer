@@ -39,3 +39,11 @@ G
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 X
 (src/components/SearchCriteriaModified.js,0\0\00705d83fef9aa57dd2484ef12992b67bf482cfb
+C
+src/resultsGrid.css,2\7\27183c1a5b0ba1e2a4a0a3bd37c77adea049eb03
+Q
+!src/resources/gridDataObject.json,a\4\a444ef00ccaa8817d1f68c10a74eee11a3752ef4
+F
+src/components/Grid.js,f\9\f9cb52308ea07a157b2d5d8d034842064156e088
+N
+src/components/resultsGrid.css,d\f\dffb4a4e71f4bbf7f95332bca4a1ec2280e55130

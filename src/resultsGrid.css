@@ -1,23 +1,115 @@
+.App {
+    background-color: #dfe1e1;
+}
+.headerTitle {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #084999;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 85% 15%
+}
+.appTitle {
+    width: 100%;
+    justify-content: left;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #dfe1e1;
+    color: #084999;
+}
+.criteria {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    padding: 0em;
+    margin-bottom: 2em;
+    background-color: #dfe1e1;
+    color: #084999;
+}
+.container {
+    display: grid;
+    grid-template-columns: 200px 220px 300px;
+    column-gap: 10px;
+    row-gap: 3px;
+    font-size: 12px;
+}
+.search {
+    display: grid;
+    grid-template-columns: 100px repeat(auto-fill, 100px) 200px;
+    height: 30px;
+    column-gap: 5px;
+}
+.history {
+    display: grid;
+    grid-template-columns: 122px 100px;
+    align-items: center;
+}
+label {
+    width:240px;
+    text-align:left;
+    padding-right:5px;
+    padding-left:5px;
+}
+input,select {
+    width:190px;
+    height:20px;
+    text-align:left;
+    padding-right:55px;
+    padding-left:5px;
+    font-family: Arial, sans-serif;
+    border:1px solid #999;
+}
+input, label,select {
+    float:left;
+}
+input[type=checkbox]{
+    height:13px;
+}
+input[type=currentPage]{
+    width:34px;
+    padding-right:0px;
+    padding-left:3px;
+}
+select{
+    -webkit-appearance: none;
+}
+
+
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    table-layout: fixed
-
+    table-layout: auto;
 }
 
 table td, table th {
-
     padding: 4px;
     font-size: 12px;
     border:1px solid #999;
+    color: #000000;
+}
 
-
+table td[name="reasonCode"], table th[name="reasonCode"]{
+    width:325px;
+}
+table td[name="pubGtin"], table th[name="pubGtin"]{
+    width:150px;
+}
+table td[name="version"], table th[name="version"]{
+    width:75px;
 }
 
 table tr:nth-child(even){
     background-color: #f2f2f2;
-
 }
 
 table tr:hover {background-color: #ddd;}
@@ -27,10 +119,9 @@ table th {
     padding-top: 6px;
     padding-bottom: 6px;
     text-align: center;
-    /*background-color: #084999;*/
     background-color: #9b9c9d;
-    color: #000000;
-    border:1px solid #999;
+    color: #ffffff;
+    border:1px solid #000000;
 }
 .footerTitle {
     box-sizing: border-box;
@@ -41,12 +132,13 @@ table th {
     align-items: center;
     padding: 1em;
     margin-bottom: 2em;
-    background-color: #9b9c9d;
+    background-color:#9b9c9d;
     color: #000000;
     font-size: 12px;
     display: grid;
-    grid-template-columns: 67px 114px 92px;
+    grid-template-columns: 67px 64px 28px 22px 38px 42px 52px 22px 22px;
     align-items: center;
+    border:1px solid #000000;
 
 }
 button {
@@ -61,12 +153,23 @@ button {
     justify-content: center;
 }
 .itemPage {
-    width:100px;
-    height:20px;/* uses normal box model */
+    width:50px;
+    height:20px;
     text-align:left;
     font-family: Arial, sans-serif;
     border:1px solid #999;
     float:left;
-    padding-right:55px;
-    padding-left:5px;
+    padding-right:0px;
+    padding-left:0px;
+}
+.dateTimePicker {
+    width:250px;
+    height:20px;
+    text-align:left;
+    font-family: Arial, sans-serif;
+    border:1px solid #999;
+    float:left;
+    padding-right:0px;
+    padding-left:0px;
+    font-size: 12px;
 }

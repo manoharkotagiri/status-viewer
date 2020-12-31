@@ -7,6 +7,7 @@ import Button from "kds-react/build/cjs/components/Button/Button";
 import Text from "kds-react/build/cjs/components/Text/Text";
 import Form from "kds-react/build/cjs/components/Form/Form";
 import Grid from "./Grid";
+import "../resultsGrid.css";
 
 const dropDownElements = [
     {value: "equals", label: "equals"},
@@ -32,11 +33,12 @@ class SearchCriteriaModified extends React.Component {
             roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
             venusImfNumberValue: "", venusImfNumberCriteria: "equals",
             venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
-            pageNumber: 0, pageSize: 10, sortAscending: true, responseData: null, queriesInState:[], finalJsonInState:null
+            pageNumber: 1, pageSize: 10, sortAscending: true, responseData: null, queriesInState:[],
+            finalJsonInState:null, includeHistory: false
         }
     }
 
-    onSubmit =() => {
+    onSubmit = () => {
 
         let searchList = []
 
@@ -104,6 +106,7 @@ class SearchCriteriaModified extends React.Component {
         }
 
         const finalJson = {
+            includeHistory: this.state.includeHistory,
             queries: searchList,
             pageRequest: {
                 "pageNumber": this.state.pageNumber,
@@ -124,6 +127,7 @@ class SearchCriteriaModified extends React.Component {
         })
 
         return (
+
             <div className="appTitle">
 
                 <h3 className="text-default-900">VIP Hierarchy Status Viewer</h3>
@@ -175,14 +179,17 @@ class SearchCriteriaModified extends React.Component {
                             <input className="text-default-900" type="text" ref={this.state.hierarchyStatusValue}
                                    onChange={e => this.setState({hierarchyStatusValue: e.target.value})}/>
 
-
                             {/*Role Update Date and Time: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Role Update Date and Time</Label>
                             <select className="text-default-900" type="search" name="operators1" id="operators1"
                                     value={this.state.roleUpdateDatetimeCriteria}
                                     onChange={e => this.setState({roleUpdateDatetimeCriteria: e.target.value})}>
                                 {dropDownOptions}
+                                {/*<option value="later than or equals">later than or equals</option>*/}
+                                {/*<option value="earlier than or equals">earlier than or equals</option>*/}
                             </select>
+
+                            {/*<Picker /> /!*Date Time picker for Role Update Date and Time*!/*/}
                             <input className="text-default-900" type="text" ref={this.state.roleUpdateDatetimeValue}
                                    onChange={e => this.setState({roleUpdateDatetimeValue: e.target.value})}/>
 
@@ -206,11 +213,15 @@ class SearchCriteriaModified extends React.Component {
                             <input className="text-default-900" type="text" ref={this.state.venusReasonCodeValue}
                                    onChange={e => this.setState({venusReasonCodeValue: e.target.value})}/>
 
-                        </div>
-                        {/*Show History: label, checkbox*/}
-                        <div className="history">
-                            <Label className="text-default-900" size="s">Include History</Label>
-                            <input className="text-default-900" type="checkbox" id="showHistory" name="showHistory"/>
+                            {/*Show History: label, checkbox*/}
+                            <div className="history">
+                                <Label className="text-default-900" size="s">Include History</Label>
+                                <input className="text-default-900" type="checkbox"
+                                       checked={this.state.checked}
+                                       onChange={() => this.setState({includeHistory: !this.state.checked})}
+                                />
+                            </div>
+
                         </div>
                         <br/>
 
