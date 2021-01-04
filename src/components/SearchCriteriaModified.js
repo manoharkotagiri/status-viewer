@@ -7,6 +7,7 @@ import Button from "kds-react/build/cjs/components/Button/Button";
 import Text from "kds-react/build/cjs/components/Text/Text";
 import Form from "kds-react/build/cjs/components/Form/Form";
 import Grid from "./Grid";
+import BlankGrid from "./BlankGrid";
 import "../resultsGrid.css";
 
 const dropDownElements = [
@@ -118,6 +119,20 @@ class SearchCriteriaModified extends React.Component {
         this.setState({finalJsonInState: finalJson})
     };
 
+    clearSearchCriteria = () =>{
+        this.setState ({
+            publishedGtinValue: "", publishedGtinCriteria: "equals",
+            innerPackGtinValue: "", innerPackGtinCriteria: "equals",
+            svGtinValue: "", svGtinCriteria: "equals",
+            hierarchyStatusValue: "", hierarchyStatusCriteria: "equals",
+            roleUpdateDatetimeValue: "", roleUpdateDatetimeCriteria: "equals",
+            venusImfNumberValue: "", venusImfNumberCriteria: "equals",
+            venusReasonCodeValue: "", venusReasonCodeCriteria: "equals",
+            pageNumber: 1, pageSize: 10, sortAscending: true, responseData: null, queriesInState:[],
+            finalJsonInState:null, includeHistory: false
+        });
+    }
+
     render() {
 
         let dropDownOptions = dropDownElements.map((element, i) => {
@@ -141,8 +156,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Published GTIN: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Published GTIN</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.publishedGtinCriteria}
+                            <select className="text-default-900" type="search" value={this.state.publishedGtinCriteria}
                                     onChange={e => this.setState({publishedGtinCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -151,8 +165,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Inner Pack Item ID: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Inner Pack Item ID</Label>
-                            <select className="text-default-900" type="search" name="operators2" id="operators2"
-                                    value={this.state.innerPackGtinCriteria}
+                            <select className="text-default-900" type="search" value={this.state.innerPackGtinCriteria}
                                     onChange={e => this.setState({innerPackGtinCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -161,8 +174,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Sales Variant Item ID: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Sales Variant Item ID</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.svGtinCriteria}
+                            <select className="text-default-900" type="search" value={this.state.svGtinCriteria}
                                     onChange={e => this.setState({svGtinCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -171,8 +183,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Item Hierarchy Status: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Item Hierarchy Status</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.hierarchyStatusCriteria}
+                            <select className="text-default-900" type="search" value={this.state.hierarchyStatusCriteria}
                                     onChange={e => this.setState({hierarchyStatusCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -181,8 +192,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Role Update Date and Time: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Role Update Date and Time</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.roleUpdateDatetimeCriteria}
+                            <select className="text-default-900" type="search" value={this.state.roleUpdateDatetimeCriteria}
                                     onChange={e => this.setState({roleUpdateDatetimeCriteria: e.target.value})}>
                                 {dropDownOptions}
                                 {/*<option value="later than or equals">later than or equals</option>*/}
@@ -195,8 +205,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Venus IMF Number: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Venus IMF Number</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.venusImfNumberCriteria}
+                            <select className="text-default-900" type="search" value={this.state.venusImfNumberCriteria}
                                     onChange={e => this.setState({venusImfNumberCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -205,8 +214,7 @@ class SearchCriteriaModified extends React.Component {
 
                             {/*Venus Reason Code: label, dropdown and text input*/}
                             <Label className="text-default-900" size="s">Venus Reason Code</Label>
-                            <select className="text-default-900" type="search" name="operators1" id="operators1"
-                                    value={this.state.venusReasonCodeCriteria}
+                            <select className="text-default-900" type="search" value={this.state.venusReasonCodeCriteria}
                                     onChange={e => this.setState({venusReasonCodeCriteria: e.target.value})}>
                                 {dropDownOptions}
                             </select>
@@ -228,11 +236,15 @@ class SearchCriteriaModified extends React.Component {
                         {/*Submit and Clear buttons*/}
                         <div className="search">
                             <Button className="bg-brand-primary" compact type="submit">Search</Button>
-                            <Button className="bg-brand-primary" compact type="reset"> Clear</Button>
+                            <Button className="bg-brand-primary" compact type="reset" onClick={() => this.clearSearchCriteria()}> Clear</Button>
                         </div>
                     </Form>
                 </div>
-                <Grid girdJson={this.state.finalJsonInState}/>
+                {/*On the initial load of the app, Display BlankGrid or when Search Json is populated call Grid.js*/}
+                {(this.state.finalJsonInState !== null) ?
+                    <Grid girdJson={this.state.finalJsonInState}/>
+                    : <BlankGrid/>
+                }
             </div>
         );
     }

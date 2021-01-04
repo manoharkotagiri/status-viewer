@@ -1,5 +1,7 @@
 .App {
     background-color: #dfe1e1;
+    min-height: 1000px;
+    max-height: 1200px;
 }
 .headerTitle {
     box-sizing: border-box;
@@ -87,7 +89,7 @@ select{
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 1200px;
     table-layout: auto;
 }
 
@@ -108,6 +110,23 @@ table td[name="version"], table th[name="version"]{
     width:75px;
 }
 
+.salesVariant {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height:130px;
+    width:125px;
+}
+.idColumns {
+    width:125px;
+}
+
+.statusAndTime {
+    width:300px;
+}
+
+td[colspan="99"] {
+    text-align: center;
+}
 table tr:nth-child(even){
     background-color: #f2f2f2;
 }
@@ -125,7 +144,7 @@ table th {
 }
 .footerTitle {
     box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     height: 40px;
     display: flex;
     justify-content: center;
